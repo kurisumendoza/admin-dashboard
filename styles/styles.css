@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #e2e8f0;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 20% auto;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #1c94d3;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 20% auto;
+}
+
+.header {
+  background-color: #ffffff;
+}
