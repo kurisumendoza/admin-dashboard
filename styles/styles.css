@@ -17,6 +17,36 @@ body {
 
 .sidebar {
   background-color: #1c94d3;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 2rem repeat(6, auto) 2rem repeat(3, auto) 1fr;
+  gap: 1rem;
+}
+
+.dashboard-icon {
+  height: 3rem;
+  fill: #ffffff;
+}
+
+.sidebar > h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  align-self: center;
+}
+
+.icon {
+  height: 1.5rem;
+  fill: #ffffff;
+  justify-self: center;
+  grid-column: 1;
+}
+
+.sidebar p {
+  font-size: 1.25rem;
+  color: #ffffff;
+  align-self: center;
+  grid-column: 2;
 }
 
 .content {
