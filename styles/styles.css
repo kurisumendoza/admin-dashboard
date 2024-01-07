@@ -12,10 +12,10 @@ body {
 .main-container {
   display: grid;
   grid-template-columns: 20% auto;
-  height: 100vh;
 }
 
 .sidebar {
+  height: 100vh;
   background-color: #1c94d3;
   padding: 1rem;
   display: grid;
@@ -51,9 +51,91 @@ body {
 
 .content {
   display: grid;
-  grid-template-rows: 20% auto;
+  grid-template-rows: 25% auto;
 }
 
 .header {
   background-color: #ffffff;
+  padding: 1.25rem 2.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr 2fr;
+  box-shadow: 1px 6px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-top {
+  padding: 0px 1rem;
+  align-self: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto 15%;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.header-icon {
+  height: 1.5rem;
+}
+
+input[type="search"] {
+  width: 80%;
+  padding: 1rem;
+  background-color: #e2e8f0;
+  border-style: none;
+  border-radius: 2rem;
+}
+
+.header-top > img {
+  height: 3rem;
+  border-radius: 1.5rem;
+  margin: 0 1rem;
+}
+
+.header-main {
+  padding: 1.5rem;
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 0.25rem;
+  grid-template-columns: auto auto 1fr repeat(3, auto);
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  grid-template-areas:
+    "image . . . . ."
+    "image greeting . new upload share"
+    "image profile . new upload share"
+    "image . . . . .";
+}
+
+.header-main > img {
+  height: 6rem;
+  border-radius: 3rem;
+  grid-area: image;
+}
+
+.header-main > p {
+  grid-area: greeting;
+}
+
+.header-main > h1 {
+  font-size: 2rem;
+  grid-area: profile;
+}
+
+.new {
+  grid-area: new;
+}
+
+.upload {
+  grid-area: upload;
+}
+
+.share {
+  grid-area: share;
+}
+
+.header-main button {
+  font-size: 1.25rem;
+  color: white;
+  background-color: #1c94d3;
+  border-style: none;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
 }
