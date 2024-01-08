@@ -51,20 +51,19 @@ body {
 
 .content {
   display: grid;
-  grid-template-rows: 25% auto;
+  grid-template-rows: auto 1fr;
 }
 
 .header {
   background-color: #ffffff;
-  padding: 1.25rem 2.5rem;
+  padding: 0 2.5rem;
   display: grid;
-  gap: 1rem;
   grid-template-rows: 1fr 2fr;
   box-shadow: 1px 6px 6px 2px rgba(0, 0, 0, 0.2);
 }
 
 .header-top {
-  padding: 0px 1rem;
+  padding: 1rem;
   align-self: center;
   display: grid;
   grid-template-columns: auto 1fr auto auto 15%;
@@ -91,32 +90,33 @@ input[type="search"] {
 }
 
 .header-main {
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   display: grid;
   column-gap: 2rem;
-  row-gap: 0.25rem;
+  row-gap: 0.5rem;
   grid-template-columns: auto auto 1fr repeat(3, auto);
-  grid-template-rows: 1fr 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "image . . . . ."
     "image greeting . new upload share"
-    "image profile . new upload share"
-    "image . . . . .";
+    "image profile . new upload share";
+  align-items: center;
 }
 
 .header-main > img {
-  height: 6rem;
-  border-radius: 3rem;
+  height: 7em;
+  border-radius: 3.5em;
   grid-area: image;
 }
 
 .header-main > p {
   grid-area: greeting;
+  align-self: end;
 }
 
 .header-main > h1 {
   font-size: 2rem;
   grid-area: profile;
+  align-self: baseline;
 }
 
 .new {
